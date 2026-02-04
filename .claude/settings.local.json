@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command:*)",
+      "Bash(cmd /c \"dir /s /b C:\\\\Python* 2>nul | findstr /i python.exe\")",
+      "Bash(cmd /c \"dir /s /b \"\"%ProgramFiles%\\\\Python*\"\" 2>nul | findstr /i python.exe\")",
+      "Bash(cmd /c \"if exist \"\"%LOCALAPPDATA%\\\\Programs\\\\Python\"\" \\(dir /s /b \"\"%LOCALAPPDATA%\\\\Programs\\\\Python\"\" | findstr /i python.exe\\) else \\(echo Not found\\)\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\okuca\\\\claude\\\\add_path.ps1\")",
+      "Bash(start powershell)"
+    ]
+  }
+}
