@@ -1,0 +1,11 @@
+# SSH Config for remote server
+# Copy to ~/.ssh/config or use with: ssh -F ssh_config server
+
+Host server
+    HostName 23.23.211.5
+    User ubuntu
+    IdentityFile ./myopenclaw.pem
+    StrictHostKeyChecking accept-new
+    ConnectTimeout 10
+    ServerAliveInterval 60
+    ServerAliveCountMax 3
