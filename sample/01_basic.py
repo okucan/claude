@@ -12,7 +12,7 @@ client = anthropic.Anthropic()  # ANTHROPIC_API_KEY 환경변수 사용
 
 def basic_request():
     response = client.messages.create(
-        model="claude-opus-4-6",
+        model="claude-haiku-4-5-20251001",
         max_tokens=1024,
         messages=[
             {"role": "user", "content": "파이썬으로 피보나치 수열을 구하는 함수를 짜줘"}
@@ -30,7 +30,7 @@ def basic_request():
 def with_system_prompt():
     print("\n[시스템 프롬프트 예시]")
     response = client.messages.create(
-        model="claude-opus-4-6",
+        model="claude-haiku-4-5-20251001",
         max_tokens=512,
         system="당신은 한 줄로만 답하는 짧은 답변 전문가입니다.",
         messages=[
